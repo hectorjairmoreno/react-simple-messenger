@@ -55,7 +55,7 @@ class IndexPage extends React.Component {
             ? messages.map((m, index) => {
                 return (
                   <p key={index}>
-                    {m.name}:{m.message}
+                    {m.name}:&nbsp; {m.message}
                   </p>
                 );
               })
