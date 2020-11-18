@@ -3,6 +3,8 @@ import { withRouter } from "react-router-dom";
 
 class IndexPage extends React.Component {
   state = {
+    userName: "",
+    userNameConfirmed: false,
     message: "",
     messages: [
       {
@@ -38,9 +40,15 @@ class IndexPage extends React.Component {
     });
   };
 
+  setUserName = (e) => {
+    this.setState({
+      userName: e.target.value,
+    });
+  };
+
   sendMessage = () => {
-    const { messages, message } = this.state;
-    messages.push({ name: "Joshua", message });
+    const { messages, message, userName } = this.state;
+    messages.push({ name: userName, message });
     if (message.length === 0) {
       return null;
     }
@@ -49,8 +57,14 @@ class IndexPage extends React.Component {
       message: "",
     });
   };
+
+  confirmUserName = () => {
+    this.setState({
+      userNameConfirmed: true,
+    });
+  };
   render() {
-    const { messages, message } = this.state;
+    const { messages, message, userName, userNameConfirmed } = this.state;
     return (
       <div className="container">
         <div style={{ textAlign: "center", color: "white" }}>
@@ -64,10 +78,34 @@ class IndexPage extends React.Component {
               })
             : null}
 
-          <input src="text" onChange={this.setMessage} value={message} />
-          <button className="btn btn-danger" onClick={this.sendMessage}>
-            Send
-          </button>
+          {userName.length > 0 && userNameConfirmed ? (
+            <React.Fragment>
+              <input
+                src="text"
+                placeholder="Type your message here"
+                onChange={this.setMessage}
+                value={message}
+              />
+              <button className="btn btn-danger" onClick={this.sendMessage}>
+                Send
+              </button>
+            </React.Fragment>
+          ) : (
+            <React.Fragment>
+              <input
+                src="text"
+                placeholder="Type username here"
+                onChange={this.setUserName}
+                value={userName}
+              />
+              <button
+                className="btn btn-primary"
+                onClick={this.confirmUserName}
+              >
+                Confirm user name
+              </button>
+            </React.Fragment>
+          )}
         </div>
       </div>
     );
