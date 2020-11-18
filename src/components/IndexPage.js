@@ -41,6 +41,9 @@ class IndexPage extends React.Component {
   sendMessage = () => {
     const { messages, message } = this.state;
     messages.push({ name: "Joshua", message });
+    if (message.length === 0) {
+      return null;
+    }
     this.setState({
       messages,
       message: "",
