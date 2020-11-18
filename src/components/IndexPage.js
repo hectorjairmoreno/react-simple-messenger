@@ -86,7 +86,10 @@ class IndexPage extends React.Component {
                 onChange={this.setMessage}
                 value={message}
               />
-              <button className="btn btn-danger" onClick={this.sendMessage}>
+              <button
+                className="btn btn-danger border-button"
+                onClick={this.sendMessage}
+              >
                 Send
               </button>
             </React.Fragment>
@@ -99,7 +102,7 @@ class IndexPage extends React.Component {
                 value={userName}
               />
               <button
-                className="btn btn-primary"
+                className="btn btn-primary border-button"
                 onClick={this.confirmUserName}
               >
                 Confirm user name

@@ -7,6 +7,10 @@ body {
   line-height: 1.3;
 }
 
+.border-button {
+  border-radius: 18px;
+}
+
 .signature-flex {
   display: flex;
   flex-direction: column;
