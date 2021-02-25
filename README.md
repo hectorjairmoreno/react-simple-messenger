@@ -1,4 +1,4 @@
-This is an open source repo to create a basic website using React, Redux, React Router DOM.
+This is a copyrighted example using React, Redux, React Router DOM.
 
 This is a simple slack react application, you will need an api to enable all communcation in the cloud.
 
