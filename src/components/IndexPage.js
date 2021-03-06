@@ -66,7 +66,7 @@ class IndexPage extends React.Component {
   render() {
     const { messages, message, userName, userNameConfirmed } = this.state;
     return (
-      <div className="container">
+      <div className="messenger-box">
         <div style={{ textAlign: "center", color: "white" }}>
           {messages.length > 0
             ? messages.map((m, index) => {
