@@ -24,7 +24,7 @@ h6 {
 .button-red {
   background: #ec2049;
   color: white;
-  width: 12%;
+  width: 10rem;
   display: inline-block;
   height: 2.5rem;
   border-radius: 15px;
@@ -36,33 +36,6 @@ h6 {
   border-radius: 9px;
   height: 2.2rem;
   border: 1px solid black;
-  width: 11.6%;
+  width: 10rem;
   border-radius: 15px;
-}
-
-@media only screen and (max-width: 900px) {
-  .button-red {
-    width: 20%;
-  }
-  .input-box {
-    width: 15%;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .button-red {
-    width: 30%;
-  }
-  .input-box {
-    width: 30%;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .button-red {
-    width: 40%;
-  }
-  .input-box {
-    width: 30%;
-  }
 }
