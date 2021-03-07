@@ -80,33 +80,41 @@ class IndexPage extends React.Component {
 
           {userName.length > 0 && userNameConfirmed ? (
             <React.Fragment>
-              <input
-                src="text"
-                placeholder="Type your message here"
-                onChange={this.setMessage}
-                value={message}
-              />
-              <button
-                className="btn btn-danger border-button"
-                onClick={this.sendMessage}
-              >
-                Send
-              </button>
+              <div>
+                <div>
+                  <input
+                    src="text"
+                    placeholder="Type your message here"
+                    className="input-box"
+                    onChange={this.setMessage}
+                    value={message}
+                  />
+                </div>
+                <div>
+                  <button className="button-red" onClick={this.sendMessage}>
+                    Send
+                  </button>
+                </div>
+              </div>
             </React.Fragment>
           ) : (
             <React.Fragment>
-              <input
-                src="text"
-                placeholder="Type username here"
-                onChange={this.setUserName}
-                value={userName}
-              />
-              <button
-                className="btn btn-primary border-button"
-                onClick={this.confirmUserName}
-              >
-                Confirm user name
-              </button>
+              <div>
+                <div>
+                  <input
+                    src="text"
+                    placeholder="Type username here"
+                    className="input-box"
+                    onChange={this.setUserName}
+                    value={userName}
+                  />
+                </div>
+                <div>
+                  <button className="button-red" onClick={this.confirmUserName}>
+                    Confirm user name
+                  </button>
+                </div>
+              </div>
             </React.Fragment>
           )}
         </div>

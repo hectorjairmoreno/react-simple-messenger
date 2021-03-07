@@ -1,5 +1,6 @@
 body {
   font-family: "Lato";
+  background: black;
 }
 
 h1,
@@ -18,4 +19,50 @@ h6 {
   height: 100%;
   background: black;
   font-size: 20px;
+}
+
+.button-red {
+  background: #ec2049;
+  color: white;
+  width: 12%;
+  display: inline-block;
+  height: 2.5rem;
+  border-radius: 15px;
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.input-box {
+  border-radius: 9px;
+  height: 2.2rem;
+  border: 1px solid black;
+  width: 11.6%;
+  border-radius: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+  .button-red {
+    width: 20%;
+  }
+  .input-box {
+    width: 15%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .button-red {
+    width: 30%;
+  }
+  .input-box {
+    width: 30%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .button-red {
+    width: 40%;
+  }
+  .input-box {
+    width: 30%;
+  }
 }
