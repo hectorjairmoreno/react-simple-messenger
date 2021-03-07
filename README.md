@@ -10,3 +10,5 @@ npm start
 
 To build run
 npm run build
+
+Here is an example below of how the website looks https://frosty-torvalds-48d977.netlify.app/#/
